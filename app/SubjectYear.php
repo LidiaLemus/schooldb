@@ -10,7 +10,7 @@ class SubjectYear extends Model
     protected $fillable = ['subject_id','teacher_id','year_id'];
 
     public function year(){
-    	return $this->belongsTo('App\year');
+    	return $this->belongsTo('App\Year');
     }
 
     public function teacher(){
@@ -18,5 +18,8 @@ class SubjectYear extends Model
     }
      public function subject(){
     	return $this->belongsTo('App\Subject');
+    }
+    public function enrollments(){
+        return $this->hasMany('App\Enrollment');
     }
 }

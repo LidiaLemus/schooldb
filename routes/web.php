@@ -18,4 +18,5 @@ Route::get('/', function () {
 Route::resource('student','StudentController');
 Route::resource('teacher','TeacherController');
 Route::resource('subject','SubjectController');
+Route::resource('subject_year','SubjectYearController');
 
